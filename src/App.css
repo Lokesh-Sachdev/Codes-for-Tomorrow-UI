@@ -1,38 +1,307 @@
-.App {
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --background: #d4dde5;
+  --green: #94ebc6;
+  --red: #fa8f8f;
+  --white: #ffffff;
+  --grey: #b9b9b9;
+}
+
+.app {
+  display: flex;
+}
+
+.app .app__sidebar {
+  height: 100vh;
+  min-width: 360px;
+  border-radius: 0 0 1.5rem 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  padding: 4rem 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.app__sidebar-user,
+.app__sidebar-toggle,
+.app__sidebar-feedback {
+  background-color: var(--white);
+  border-radius: 10px;
+
+  padding: 1rem;
   text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app .app__sidebar-toggle_actions {
+  width: fit-content;
+  background-color: var(--background);
+  margin: 1rem auto;
+
+  border-radius: 8px;
+  box-shadow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.app .app__sidebar-toggle_actions button {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.app .app__sidebar-toggle_actions button.active {
+  background-color: var(--green);
+}
+
+.app .app__sidebar .app__sidebar-feedback button {
+  background-color: var(--green);
+  padding: 10px 20px;
+  margin-top: 15px;
+
+  font-size: 16px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.app__main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.cards__container {
+  padding: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  max-width: 1440px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+@media (min-width: 601px) and (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card-grid .card {
+  max-width: 300px;
+  position: relative;
+}
+
+.card-grid .card .card__content-icon {
+  display: none;
+}
+
+.card-grid .card button {
+  position: absolute;
+  top: 0;
+  right: 30px;
+  border-radius: 0 10px 0 0;
+  box-shadow: none;
+}
+
+.card-list {
   flex-direction: column;
   align-items: center;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+
+  max-width: 1000px;
+}
+
+.cards__container .card .card__content {
+  max-width: 90%;
+  background-color: var(--white);
+  padding: 1rem;
+
+  margin-right: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cards__container .card .card__content div:last-child {
+  width: 80%;
+}
+
+.card-list .card .card__content .card__content-icon {
+  background-color: var(--green);
+  border-radius: 50%;
+  height: 60px;
+  display: flex;
+  width: 60px;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cards__container .card p:first-child {
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.cards__container .card p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cards__container .card p:last-child {
+  color: var(--grey);
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.card button {
+  background-color: var(--white);
+  color: var(--red);
+  height: 50px;
+
+  border-radius: 50%;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.app__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.app__actions button {
+  color: #babbba;
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.app__actions .page {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  background: #babbba;
+  color: var(--white);
+  font-weight: 900;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.app__actions .active-page {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: none;
+  color: #babbba;
+  background-color: var(--white);
+  font-weight: 900;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: scale(1.2);
+}
+
+.app form {
+  margin-top: 10px;
+}
+
+.app form label {
+  display: flex;
+  flex-direction: column;
+}
+
+.app form input {
+  padding: 5px 0;
+}
+
+.app .form__btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--green);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  top: 300px;
+  left: 500px;
+  animation: pulse 1s linear infinite;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 5px solid var(--green);
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
   }
-  to {
-    transform: rotate(360deg);
+  60%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes pulse {
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
   }
 }
