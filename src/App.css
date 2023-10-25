@@ -33,6 +33,7 @@
 .app__sidebar-user,
 .app__sidebar-toggle,
 .app__sidebar-feedback {
+  width: 240px;
   background-color: var(--white);
   border-radius: 10px;
 
