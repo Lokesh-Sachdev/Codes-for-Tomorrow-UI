@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Codes for Tomorrow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React web application that fetches and displays data from the JSONPlaceholder API. Users can view cards, navigate through pages, toggle between list and grid views, and submit feedback.
 
-## Available Scripts
+![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/f0353481-c8b3-47b9-8b01-c8a0e297dc99)
+![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/4b8034cd-768f-4f10-a61a-95f9a068c9eb)
+![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/15fef7f2-59ed-493c-b311-a3cdb0dd71a6)
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Deployment](#deployment)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Display cards fetched from [JSONPlaceholder API](https://jsonplaceholder.typicode.com/posts).
+- Pagination with a maximum of 3 pages.
+- Toggle between list and grid views.
+- Remove cards from the current view.
+- Loading screen displayed for 5 seconds on startup.
+- Feedback form with validation and reset on submit.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/your-username/react-card-app.git
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Change into the project directory:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   cd react-card-app
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Install dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+react-card-app/
+|-- public/
+|-- src/
+|   |-- api/
+|   |-- components/
+|   |-- redux/
+|   |-- styles/
+|   |-- App.js
+|   |-- index.js
+|   |-- ...
+|-- .gitignore
+|-- package.json
+|-- README.md
+|-- ...
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **`public/`**: Contains static assets and the HTML template.
 
-### Code Splitting
+- **`src/`**: Contains the source code for the React application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+  - **`api/`**: Functions to fetch data from external APIs.
 
-### Analyzing the Bundle Size
+  - **`components/`**: React components used in the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  - **`redux/`**: Redux actions, reducers, and store.
 
-### Making a Progressive Web App
+  - **`styles/`**: CSS or other styling files.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+  - **`App.js`**: The main component that renders the application.
 
-### Advanced Configuration
+  - **`index.js`**: Entry point for React rendering.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Dependencies
 
-### Deployment
+- [React](https://reactjs.org/)
+- [Redux](https://redux.js.org/)
+- [React-Redux](https://react-redux.js.org/)
+- [axios](https://axios-http.com/)
+- [React Icons](https://react-icons.github.io/react-icons)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment
 
-### `npm run build` fails to minify
+The application is deployed using Netlify and can be accessed online at [Deployed Application Link](https://hilarious-flan-145318.netlify.app/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Please feel free to reach out if you have any questions or need further clarification.
+
+
