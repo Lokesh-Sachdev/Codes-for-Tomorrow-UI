@@ -2,7 +2,8 @@
 
 A React web application that fetches and displays data from the JSONPlaceholder API. Users can view cards, navigate through pages, toggle between list and grid views, and submit feedback.
 
-![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/f0353481-c8b3-47b9-8b01-c8a0e297dc99)
+
+![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/e46d901b-92b7-4b4b-aa95-e4c8366fe463)
 ![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/4b8034cd-768f-4f10-a61a-95f9a068c9eb)
 ![image](https://github.com/Lokesh-Sachdev/Codes-for-Tomorrow-UI/assets/109384819/15fef7f2-59ed-493c-b311-a3cdb0dd71a6)
 
